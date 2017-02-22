@@ -47,7 +47,7 @@ int main(int argc, const char * argv[]) {
   cout << object_features->points[0] << endl;
   
   FILE* fid = fopen(argv[2], "wb");
-  int nV = cloud->size(), nDim = 0;
+  int nV = cloud->size(), nDim = 33;
   fwrite(&nV, sizeof(int), 1, fid);
   fwrite(&nDim, sizeof(int), 1, fid);
   for (int v = 0; v < nV; v++) {
